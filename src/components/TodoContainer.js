@@ -1,10 +1,7 @@
 import React from 'react';
+import TodoList from './TodosList';
 
 class TodoContainer extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {};
-  // }
 
   state = {
     todos: [
@@ -28,9 +25,9 @@ class TodoContainer extends React.Component {
 
   render() {
     return (
-      <ul>
-        {this.state.todos.map(todo => <li>{todo.title}</li>)}
-      </ul>
+      <div>
+        <TodoList todos={this.state.todos} />
+      </div>
     );
   }
 }
