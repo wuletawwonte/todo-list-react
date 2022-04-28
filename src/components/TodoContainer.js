@@ -3,7 +3,6 @@ import TodoList from "./TodosList";
 import Header from "./Header";
 import InputTodo from "./InputTodo";
 import { v4 as uuidv4 } from "uuid";
-import { Route, Switch } from "react-router-dom";
 
 class TodoContainer extends React.Component {
   state = {
@@ -68,20 +67,18 @@ class TodoContainer extends React.Component {
 
   render() {
     return (
-      <Route exact path="/">
-        <div className="container">
-          <div className="inner">
-            <Header />
-            <InputTodo addTodoProps={this.addTodoItem} />
-            <TodoList
-              todos={this.state.todos}
-              handleChangeProps={this.handleChange}
-              deleteTodoProps={this.delTodo}
-              setUpdate={this.setUpdate}
-            />
-          </div>
+      <div className="container">
+        <div className="inner">
+          <Header />
+          <InputTodo addTodoProps={this.addTodoItem} />
+          <TodoList
+            todos={this.state.todos}
+            handleChangeProps={this.handleChange}
+            deleteTodoProps={this.delTodo}
+            setUpdate={this.setUpdate}
+          />
         </div>
-      </Route>
+      </div>
     );
   }
 }
