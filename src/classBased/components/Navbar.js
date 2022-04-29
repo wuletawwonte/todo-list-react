@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { MdClose } from 'react-icons/md';
 import { FiMenu } from 'react-icons/fi';
-import links from '../routes';
+import links from '../../routes';
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
