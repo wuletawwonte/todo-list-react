@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './App.css';
+import './functionBased/App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import TodoContainer from './components/TodoContainer';
+import TodoContainer from './functionBased/components/TodoContainer';
 import About from './pages/About';
 import NotMatch from './pages/NotMatch';
-import Navbar from './components/Navbar';
+import Navbar from './functionBased/components/Navbar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
